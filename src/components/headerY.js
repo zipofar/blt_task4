@@ -1,11 +1,10 @@
 import React from 'react';
 
 export default (props) => {
+  const { position, headers } = props;
   return(
-    <div className="header-y">
-      <ul>
-        {Array(8).fill(0).map((_e, i) => (<li>{8 - i}</li>))}
-      </ul>
+    <div className={`chess-desk__header-y chess-desk__header-y__p-${position}`}>
+      {headers.map(digit => (<div className="chess-desk__header__letter">{digit}</div>))}
     </div>
   );
 }

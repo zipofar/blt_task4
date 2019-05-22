@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default (props) => {
-  const xCoords = ['a', 'b', 'c' , 'd', 'e', 'f', 'g', 'h'];
+  const { position, headers } = props;
   return(
-    <div className="chess-desk__header-x">
-        {xCoords.map((letter) => (<div className="chess-desk__header-x__letter">{letter}</div>))}
+    <div className={`chess-desk__header-x chess-desk__header-x__p-${position}`}>
+        {headers.map(letter => (<div className="chess-desk__header__letter">{letter.toUpperCase()}</div>))}
     </div>
   );
 }

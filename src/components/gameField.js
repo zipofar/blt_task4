@@ -52,10 +52,14 @@ export default class GameField extends React.Component {
   }
 
   render() {
+    const { xCoords } = this.props;
+    const digitHeaders = xCoords.map((_e, i) => (xCoords.length - i));
     return (
       <div className="chess-desk">
-        <HeaderX />
-        <HeaderY />
+        <HeaderX position="top" headers={xCoords}/>
+        <HeaderX position="bottom" headers={xCoords}/>
+        <HeaderY position="left" headers={digitHeaders}/>
+        <HeaderY position="right" headers={digitHeaders}/>
         <div className="game-field">
           {this.buildField()}
         </div>
