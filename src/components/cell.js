@@ -1,14 +1,14 @@
 import React from 'react';
+import _ from 'lodash';
 
 export default (props) => {
-  const { cellId, coords: { x, y } } = props;
-  const cellColor = getColor(x, y);
+  const { cellId, coords: { x, y }, onClick, selectedCells } = props;
+  const cellColor = cellIsSelected(cellId, selectedCells) ? 'selected' : getColor(x, y);
   const colorClass = `game-field__cell__color-${cellColor}`;
   return(
     <div
       className={`game-field__cell ${colorClass}`}
-      x={x}
-      y={y}
+      onClick={onClick}
     />
   );
 }
@@ -28,4 +28,7 @@ const getColor = (x, y) => {
   if (isOdd(x) && isOdd(y)) {
     return 'black';
   }
+}
+const cellIsSelected = (cellId, selectedCells) => {
+  return _.findIndex(selectedCells, (e) => (e === cellId.toUpperCase())) > -1;
 }

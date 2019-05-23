@@ -1,10 +1,10 @@
 import React from 'react';
-import GameField from './components/gameField';
+import ChessDesk from './components/chessDesk';
 
 function App() {
   return (
     <div className="App">
-      <GameField />
+      <ChessDesk />
     </div>
   );
 }
