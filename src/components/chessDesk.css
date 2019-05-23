@@ -1,22 +1,22 @@
 .chess-desk {
-  background-color: green;
   width: 500px;
   height: 500px;
   padding: 0px;
   position: relative;
+  border: 1px solid black;
 }
 
 .chess-desk__game-field {
   position: absolute;
   top: 50px;
   left: 50px;
+  border: 1px solid black;
 }
 
 .chess-desk__header-x {
   display: flex;
   width: 400px;
   height: 50px;
-  background-color: orange;
   position: absolute;
   left: 50px;
 }
@@ -40,7 +40,6 @@
 .chess-desk__header-y {
   width: 50px;
   height: 400px;
-  background-color: orange;
   position: absolute;
   top: 50px;
 }
