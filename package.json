@@ -1,6 +1,12 @@
 {
   "name": "blt_task4",
   "version": "1.0.0",
+  "license": "MIT",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x",
+    "yarn": "1.16.*"
+  },
   "dependencies": {
     "express": "^4.17.0",
     "lodash": "^4.17.11",
